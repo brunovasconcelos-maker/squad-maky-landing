@@ -326,6 +326,17 @@ button {
   gap: 60px;
 }
 
+/* Separator between consecutive feature sections (not before the first one).
+   Mobile/tablet only; reset back to the plain 40px padding at desktop. */
+.feature:has(+ .feature) {
+  padding-bottom: 60px;
+}
+
+.feature + .feature {
+  padding-top: 60px;
+  border-top: 1px solid #E5E5E5;
+}
+
 .feature-text {
   display: flex;
   flex-direction: column;
@@ -404,7 +415,6 @@ button {
     justify-content: space-between;
     gap: 40px;
     padding: 40px 20px;
-    border-bottom: 1px solid #E5E5E5;
   }
 
   .feature-text {
@@ -518,7 +528,15 @@ button {
 
   .feature {
     padding: 40px 138px;
-    border-bottom: none;
+  }
+
+  .feature:has(+ .feature) {
+    padding-bottom: 40px;
+  }
+
+  .feature + .feature {
+    padding-top: 40px;
+    border-top: none;
   }
 
   .feature-text {
