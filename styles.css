@@ -228,13 +228,21 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
 }
 
-.timeline-card img {
-  height: 180px;
-  width: auto;
-  max-width: 100%;
+.timeline-card-media {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-card-media img {
+  width: 100%;
+  height: auto;
+  max-height: 180px;
   object-fit: contain;
 }
 
