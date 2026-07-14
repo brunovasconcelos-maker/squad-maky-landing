@@ -418,6 +418,12 @@ button {
     flex: 1;
     width: auto;
   }
+
+  /* Reversed modifier: image on the left, text on the right (mobile still
+     stacks text first regardless, since order only applies to the row layout) */
+  .feature--reversed .feature-media {
+    order: -1;
+  }
 }
 
 /* ==========================================================================
@@ -528,6 +534,10 @@ button {
   .feature-heading {
     font-size: 40px;
     letter-spacing: -0.8px;
+  }
+
+  .feature--reversed .feature-text {
+    width: 454px;
   }
 }
 
