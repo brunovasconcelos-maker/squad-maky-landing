@@ -77,6 +77,19 @@ button {
   box-shadow: 0px 4px 15.5px rgba(0, 0, 0, 0.09);
 }
 
+.btn-outline {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: -0.32px;
+  height: 40px;
+  padding: 0 20px;
+  border: 1px solid #C2C8C8;
+  border-radius: 8px;
+}
+
 /* ==========================================================================
    Header
    ========================================================================== */
@@ -302,6 +315,66 @@ button {
 }
 
 /* ==========================================================================
+   Feature (reusable two-column text + media section)
+   ========================================================================== */
+.feature {
+  background: var(--bg);
+  padding: 40px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.feature-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.feature-eyebrow {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: -0.32px;
+  background: linear-gradient(90deg, var(--brand-pink), #FFD2EA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.feature-heading {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -0.64px;
+  color: var(--text-primary);
+}
+
+.feature-description {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: -0.64px;
+  color: var(--text-secondary);
+}
+
+.feature-media {
+  width: 100%;
+}
+
+.feature-media img {
+  width: 100%;
+  height: auto;
+}
+
+/* ==========================================================================
    Tablet (>= 768px)
    ========================================================================== */
 @media (min-width: 768px) {
@@ -323,6 +396,27 @@ button {
 
   .timeline-controls {
     padding: 0 20px;
+  }
+
+  .feature {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px 20px;
+    border-bottom: 1px solid #E5E5E5;
+  }
+
+  .feature-text {
+    align-items: flex-start;
+    text-align: left;
+    width: auto;
+    flex: 1;
+  }
+
+  .feature-media {
+    flex: 1;
+    width: auto;
   }
 }
 
@@ -414,6 +508,26 @@ button {
 
   .timeline-controls {
     display: none;
+  }
+
+  .feature {
+    padding: 40px 138px;
+    border-bottom: none;
+  }
+
+  .feature-text {
+    width: 453px;
+    flex: none;
+  }
+
+  .feature-media {
+    width: 570px;
+    flex: none;
+  }
+
+  .feature-heading {
+    font-size: 40px;
+    letter-spacing: -0.8px;
   }
 }
 
