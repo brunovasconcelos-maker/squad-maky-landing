@@ -58,10 +58,10 @@ button {
   color: var(--bg);
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: 14px;
-  letter-spacing: -0.28px;
-  height: 36px;
-  padding: 0 16px;
+  font-size: 16px;
+  letter-spacing: -0.32px;
+  height: 40px;
+  padding: 0 20px;
 }
 
 .btn-hero {
@@ -69,11 +69,11 @@ button {
   color: var(--bg);
   font-family: var(--font-body);
   font-weight: 500;
-  font-size: 15px;
-  letter-spacing: -0.3px;
-  height: 48px;
-  padding: 0 18px;
-  border: 2px solid rgba(255, 255, 255, 0.29);
+  font-size: 16px;
+  letter-spacing: -0.32px;
+  height: 56px;
+  padding: 0 20px;
+  border: 2.2px solid rgba(255, 255, 255, 0.29);
   box-shadow: 0px 4px 15.5px rgba(0, 0, 0, 0.09);
 }
 
@@ -88,9 +88,9 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 12px;
-  padding: 16px 20px;
+  padding: 16px 16px;
 }
 
 .header-left {
@@ -98,6 +98,12 @@ button {
   align-items: center;
   flex-wrap: wrap;
   gap: 24px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .logo {
@@ -108,7 +114,7 @@ button {
 }
 
 .main-nav {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 20px;
 }
@@ -133,18 +139,38 @@ button {
   color: var(--text-primary);
 }
 
+.menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--text-primary);
+}
+
+/* Very narrow phones: shrink the Whatsapp button's padding instead of wrapping the header */
+@media (max-width: 359px) {
+  .btn-whatsapp {
+    padding: 0 12px;
+  }
+}
+
 /* ==========================================================================
    Hero
    ========================================================================== */
 .hero {
-  padding: 64px 20px 0;
+  padding: 132px 16px 0;
 }
 
 .hero-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 28px;
+  gap: 24px;
   margin: 0 auto;
   text-align: center;
 }
@@ -152,9 +178,9 @@ button {
 .hero-title {
   font-family: var(--font-heading);
   font-weight: 600;
-  font-size: 36px;
-  line-height: 0.95;
-  letter-spacing: -1.44px;
+  font-size: 40px;
+  line-height: 0.9;
+  letter-spacing: -1.6px;
   color: var(--text-primary);
 }
 
@@ -165,11 +191,10 @@ button {
   line-height: 1.4;
   letter-spacing: -0.64px;
   color: var(--text-secondary);
-  max-width: 688px;
 }
 
 .hero-image {
-  margin-top: 64px;
+  margin-top: 80px;
 }
 
 .hero-image img {
@@ -184,25 +209,15 @@ button {
    ========================================================================== */
 @media (min-width: 768px) {
   .site-header {
-    padding: 16px 40px;
+    padding: 16px 22px;
   }
 
   .hero {
-    padding: 88px 40px 0;
-  }
-
-  .hero-title {
-    font-size: 48px;
-    letter-spacing: -1.92px;
+    padding: 96px 22px 0;
   }
 
   .hero-text {
-    font-size: 18px;
-    letter-spacing: -0.72px;
-  }
-
-  .hero-image {
-    margin-top: 96px;
+    max-width: 496px;
   }
 }
 
@@ -212,6 +227,7 @@ button {
 @media (min-width: 1024px) {
   .site-header {
     padding: 16px 80px;
+    flex-wrap: wrap;
   }
 
   .header-left {
@@ -219,7 +235,12 @@ button {
   }
 
   .main-nav {
+    display: flex;
     gap: 40px;
+  }
+
+  .menu-toggle {
+    display: none;
   }
 
   .nav-link {
@@ -248,12 +269,14 @@ button {
 
   .hero-title {
     font-size: 56px;
+    line-height: 0.95;
     letter-spacing: -2.24px;
   }
 
   .hero-text {
     font-size: 20px;
     letter-spacing: -0.8px;
+    max-width: 688px;
   }
 
   .btn-hero {
