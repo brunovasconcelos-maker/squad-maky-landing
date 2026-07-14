@@ -1,0 +1,289 @@
+/* ==========================================================================
+   Design tokens
+   ========================================================================== */
+:root {
+  --brand-pink: #F45DAC;
+  --bg: #FFFFFF;
+  --text-primary: #000000;
+  --text-secondary: #798282;
+  --radius-button: 12px;
+
+  --font-heading: 'Fustat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* ==========================================================================
+   Reset / base
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   Buttons (shared)
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-button);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-whatsapp {
+  background: var(--text-primary);
+  color: var(--bg);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: -0.28px;
+  height: 36px;
+  padding: 0 16px;
+}
+
+.btn-hero {
+  background: var(--text-primary);
+  color: var(--bg);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: -0.3px;
+  height: 48px;
+  padding: 0 18px;
+  border: 2px solid rgba(255, 255, 255, 0.29);
+  box-shadow: 0px 4px 15.5px rgba(0, 0, 0, 0.09);
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 16px 20px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.logo {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: -0.3px;
+  color: var(--text-primary);
+}
+
+.chevron {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--text-primary);
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+.hero {
+  padding: 64px 20px 0;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 0.95;
+  letter-spacing: -1.44px;
+  color: var(--text-primary);
+}
+
+.hero-text {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: -0.64px;
+  color: var(--text-secondary);
+  max-width: 688px;
+}
+
+.hero-image {
+  margin-top: 64px;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 1164px;
+  margin: 0 auto;
+  border-radius: 16px;
+}
+
+/* ==========================================================================
+   Tablet (>= 768px)
+   ========================================================================== */
+@media (min-width: 768px) {
+  .site-header {
+    padding: 16px 40px;
+  }
+
+  .hero {
+    padding: 88px 40px 0;
+  }
+
+  .hero-title {
+    font-size: 48px;
+    letter-spacing: -1.92px;
+  }
+
+  .hero-text {
+    font-size: 18px;
+    letter-spacing: -0.72px;
+  }
+
+  .hero-image {
+    margin-top: 96px;
+  }
+}
+
+/* ==========================================================================
+   Desktop (>= 1024px)
+   ========================================================================== */
+@media (min-width: 1024px) {
+  .site-header {
+    padding: 16px 80px;
+  }
+
+  .header-left {
+    gap: 60px;
+  }
+
+  .main-nav {
+    gap: 40px;
+  }
+
+  .nav-link {
+    font-size: 16px;
+    letter-spacing: -0.32px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .btn-whatsapp {
+    font-size: 16px;
+    letter-spacing: -0.32px;
+    height: 40px;
+    padding: 0 20px;
+  }
+
+  .hero {
+    padding: 120px 80px 0;
+  }
+
+  .hero-content {
+    gap: 40px;
+  }
+
+  .hero-title {
+    font-size: 56px;
+    letter-spacing: -2.24px;
+  }
+
+  .hero-text {
+    font-size: 20px;
+    letter-spacing: -0.8px;
+  }
+
+  .btn-hero {
+    font-size: 16px;
+    letter-spacing: -0.32px;
+    height: 56px;
+    padding: 0 20px;
+    border-width: 2.2px;
+  }
+
+  .hero-image {
+    margin-top: 120px;
+  }
+}
+
+/* ==========================================================================
+   Large desktop (>= 1440px) - matches Figma canvas exactly
+   ========================================================================== */
+@media (min-width: 1440px) {
+  .site-header {
+    padding: 16px 138px;
+  }
+
+  .hero {
+    padding: 120px 138px 0;
+  }
+
+  .hero-title {
+    font-size: 64px;
+    line-height: 0.9;
+    letter-spacing: -2.56px;
+  }
+}
