@@ -246,6 +246,13 @@ button {
   object-fit: contain;
 }
 
+/* timeline-cria.png renders taller than the other three at full width; scale it
+   down slightly so it doesn't crowd its text label */
+.timeline-card-media img.timeline-media-cria {
+  width: auto;
+  height: 154px;
+}
+
 .timeline-text {
   font-family: var(--font-body);
   font-weight: 500;
