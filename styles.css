@@ -205,21 +205,32 @@ button {
 }
 
 /* ==========================================================================
-   Timeline (desktop only for now)
+   Timeline (horizontal carousel on mobile/tablet, 4-column grid on desktop)
    ========================================================================== */
 .timeline {
   background: var(--bg);
-  padding: 80px 138px;
+  padding: 80px 0;
 }
 
 .timeline-grid {
   display: flex;
   gap: 20px;
   list-style: none;
+  padding: 0 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.timeline-grid::-webkit-scrollbar {
+  display: none;
 }
 
 .timeline-card {
-  flex: 1;
+  flex: 0 0 320px;
+  width: 320px;
   background: var(--bg);
   border-radius: 16px;
   box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.05);
@@ -229,6 +240,7 @@ button {
   flex-direction: column;
   align-items: center;
   gap: 32px;
+  scroll-snap-align: start;
 }
 
 .timeline-card-media {
@@ -264,6 +276,31 @@ button {
   max-width: 196px;
 }
 
+.timeline-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  padding: 0 16px;
+}
+
+.timeline-arrow {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: none;
+  background: var(--text-primary);
+  color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
 /* ==========================================================================
    Tablet (>= 768px)
    ========================================================================== */
@@ -278,6 +315,14 @@ button {
 
   .hero-text {
     max-width: 496px;
+  }
+
+  .timeline-grid {
+    padding: 0 20px;
+  }
+
+  .timeline-controls {
+    padding: 0 20px;
   }
 }
 
@@ -349,6 +394,26 @@ button {
 
   .hero-image {
     margin-top: 64px;
+  }
+
+  .timeline {
+    padding: 80px 138px;
+  }
+
+  .timeline-grid {
+    padding: 0;
+    overflow-x: visible;
+    scroll-snap-type: none;
+  }
+
+  .timeline-card {
+    flex: 1;
+    width: auto;
+    scroll-snap-align: none;
+  }
+
+  .timeline-controls {
+    display: none;
   }
 }
 
