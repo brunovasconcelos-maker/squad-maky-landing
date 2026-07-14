@@ -386,6 +386,89 @@ button {
 }
 
 /* ==========================================================================
+   Comparison ("O que muda com Maky no seu time")
+   ========================================================================== */
+.comparison {
+  background: var(--bg);
+  padding: 60px 16px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.comparison-heading {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -0.8px;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.comparison-heading-accent {
+  color: var(--brand-pink);
+}
+
+.comparison-grid {
+  display: flex;
+  width: 100%;
+}
+
+.comparison-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+.comparison-card--negative {
+  padding-right: 24px;
+}
+
+.comparison-card--positive {
+  padding-left: 24px;
+  border-left: 1px solid #EBEDED;
+}
+
+.comparison-label {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.32px;
+  color: var(--text-primary);
+}
+
+.comparison-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+}
+
+.comparison-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.comparison-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.comparison-row span {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: -0.64px;
+  color: var(--text-secondary);
+}
+
+/* ==========================================================================
    Tablet (>= 768px)
    ========================================================================== */
 @media (min-width: 768px) {
@@ -433,6 +516,21 @@ button {
      stacks text first regardless, since order only applies to the row layout) */
   .feature--reversed .feature-media {
     order: -1;
+  }
+
+  .comparison {
+    padding: 60px 20px 0;
+  }
+
+  .comparison-grid {
+    gap: 24px;
+  }
+
+  .comparison-card {
+    background: var(--bg);
+    border: 1px solid #EBEDED;
+    border-radius: 12px;
+    padding: 24px;
   }
 }
 
@@ -556,6 +654,19 @@ button {
 
   .feature--reversed .feature-text {
     width: 454px;
+  }
+
+  .comparison {
+    padding: 60px 138px 0;
+    gap: 80px;
+  }
+
+  .comparison-heading {
+    font-size: 40px;
+  }
+
+  .comparison-grid {
+    gap: 38px;
   }
 }
 
