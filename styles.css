@@ -469,6 +469,37 @@ button {
 }
 
 /* ==========================================================================
+   Call to action
+   ========================================================================== */
+.cta {
+  background: var(--bg);
+  padding: 16px;
+}
+
+.cta-block {
+  width: 100%;
+  height: 720px;
+  background: var(--brand-pink);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.cta-heading {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -2.24px;
+  color: var(--bg);
+}
+
+/* ==========================================================================
    Tablet (>= 768px)
    ========================================================================== */
 @media (min-width: 768px) {
@@ -531,6 +562,14 @@ button {
     border: 1px solid #EBEDED;
     border-radius: 12px;
     padding: 24px;
+  }
+
+  .cta {
+    padding: 20px;
+  }
+
+  .cta-heading {
+    font-size: 40px;
   }
 }
 
@@ -667,6 +706,10 @@ button {
 
   .comparison-grid {
     gap: 38px;
+  }
+
+  .cta-heading {
+    font-size: 56px;
   }
 }
 
