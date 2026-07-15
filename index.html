@@ -11,38 +11,40 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="header-left">
-      <span class="logo">squad.com</span>
-      <nav class="main-nav">
-        <button class="nav-link" type="button">
-          Agentes
-          <svg class="chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <div class="header-inner container">
+      <div class="header-left">
+        <span class="logo">squad.com</span>
+        <nav class="main-nav">
+          <button class="nav-link" type="button">
+            Agentes
+            <svg class="chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="nav-link" type="button">
+            Ferramentas
+            <svg class="chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </nav>
+      </div>
+      <div class="header-right">
+        <a class="btn btn-whatsapp" href="#">Falar no Whatsapp</a>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu">
+          <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0" y1="1" x2="18" y2="1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="0" y1="8" x2="18" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="0" y1="15" x2="18" y2="15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
           </svg>
         </button>
-        <button class="nav-link" type="button">
-          Ferramentas
-          <svg class="chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-      </nav>
-    </div>
-    <div class="header-right">
-      <a class="btn btn-whatsapp" href="#">Falar no Whatsapp</a>
-      <button class="menu-toggle" type="button" aria-label="Abrir menu">
-        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line x1="0" y1="1" x2="18" y2="1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          <line x1="0" y1="8" x2="18" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          <line x1="0" y1="15" x2="18" y2="15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-      </button>
+      </div>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="hero-content">
+      <div class="hero-content container">
         <h1 class="hero-title">
           Conheça Maky:<br>
           sua estrategista de marketing
@@ -59,122 +61,135 @@
     </section>
 
     <section class="timeline">
-      <ul class="timeline-grid">
-        <li class="timeline-card">
-          <div class="timeline-card-media">
-            <img src="images/timeline-monitora.png" alt="">
-          </div>
-          <p class="timeline-text">Monitora e analisa a concorrência diariamente.</p>
-        </li>
-        <li class="timeline-card">
-          <div class="timeline-card-media">
-            <img src="images/timeline-cria.png" alt="" class="timeline-media-cria">
-          </div>
-          <p class="timeline-text">Cria posts com o contexto que a marca já carrega.</p>
-        </li>
-        <li class="timeline-card">
-          <div class="timeline-card-media">
-            <img src="images/timeline-analisa.png" alt="">
-          </div>
-          <p class="timeline-text">Analisa, agenda, publica na hora certa.</p>
-        </li>
-        <li class="timeline-card">
-          <div class="timeline-card-media">
-            <img src="images/timeline-interage.png" alt="">
-          </div>
-          <p class="timeline-text">Interage e acompanha sua rede 24/7</p>
-        </li>
-      </ul>
-      <div class="timeline-controls">
-        <button class="timeline-arrow timeline-arrow-prev" type="button" aria-label="Anterior" disabled>
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 5L7 10L12 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <button class="timeline-arrow timeline-arrow-next" type="button" aria-label="Próximo">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M8 5L13 10L8 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
+      <div class="container">
+        <ul class="timeline-grid">
+          <li class="timeline-card">
+            <div class="timeline-card-media">
+              <img src="images/timeline-monitora.png" alt="">
+            </div>
+            <p class="timeline-text">Monitora e analisa a concorrência diariamente.</p>
+          </li>
+          <li class="timeline-card">
+            <div class="timeline-card-media">
+              <img src="images/timeline-cria.png" alt="" class="timeline-media-cria">
+            </div>
+            <p class="timeline-text">Cria posts com o contexto que a marca já carrega.</p>
+          </li>
+          <li class="timeline-card">
+            <div class="timeline-card-media">
+              <img src="images/timeline-analisa.png" alt="">
+            </div>
+            <p class="timeline-text">Analisa, agenda, publica na hora certa.</p>
+          </li>
+          <li class="timeline-card">
+            <div class="timeline-card-media">
+              <img src="images/timeline-interage.png" alt="">
+            </div>
+            <p class="timeline-text">Interage e acompanha sua rede 24/7</p>
+          </li>
+        </ul>
+        <div class="timeline-controls">
+          <button class="timeline-arrow timeline-arrow-prev" type="button" aria-label="Anterior" disabled>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 5L7 10L12 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="timeline-arrow timeline-arrow-next" type="button" aria-label="Próximo">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 5L13 10L8 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
 
     <section class="feature">
-      <div class="feature-text">
-        <p class="feature-eyebrow">MONITOR DE CONCORRÊNCIA</p>
-        <h2 class="feature-heading">
-          Sempre de olho,<br>
-          sempre publicando
-        </h2>
-        <p class="feature-description">A Maky acompanha os perfis dos seus concorrentes todo dia, compara o desempenho com o seu e mostra os posts que mais performaram no segmento. Quando algo funciona, ela rascunha uma versão sua com um clique.</p>
-        <a class="btn btn-outline" href="#">Conheça mais</a>
-      </div>
-      <div class="feature-media">
-        <img src="images/monitor-concorrencia.png" alt="Mockup do monitor de concorrência da Maky">
+      <div class="feature-inner container">
+        <div class="feature-text">
+          <p class="feature-eyebrow">MONITOR DE CONCORRÊNCIA</p>
+          <h2 class="feature-heading">
+            Sempre de olho,<br>
+            sempre publicando
+          </h2>
+          <p class="feature-description">A Maky acompanha os perfis dos seus concorrentes todo dia, compara o desempenho com o seu e mostra os posts que mais performaram no segmento. Quando algo funciona, ela rascunha uma versão sua com um clique.</p>
+          <a class="btn btn-outline" href="#">Conheça mais</a>
+        </div>
+        <div class="feature-media">
+          <img src="images/monitor-concorrencia.png" alt="Mockup do monitor de concorrência da Maky">
+        </div>
       </div>
     </section>
 
     <section class="feature feature--reversed">
-      <div class="feature-text">
-        <p class="feature-eyebrow">COMENTÁRIOS</p>
-        <h2 class="feature-heading">
-          Todo comentário<br>
-          vira conversa, na hora
-        </h2>
-        <p class="feature-description">Quem comenta no seu post recebe uma mensagem automática no direct, migrando da vitrine pra conversa onde a venda acontece. Funciona mesmo quando são centenas de comentários por dia.</p>
-        <a class="btn btn-outline" href="#">Conheça mais</a>
-      </div>
-      <div class="feature-media">
-        <img src="images/comentarios.png" alt="Mockup de comentário virando conversa no direct da Maky">
+      <div class="feature-inner container">
+        <div class="feature-text">
+          <p class="feature-eyebrow">COMENTÁRIOS</p>
+          <h2 class="feature-heading">
+            Todo comentário<br>
+            vira conversa, na hora
+          </h2>
+          <p class="feature-description">Quem comenta no seu post recebe uma mensagem automática no direct, migrando da vitrine pra conversa onde a venda acontece. Funciona mesmo quando são centenas de comentários por dia.</p>
+          <a class="btn btn-outline" href="#">Conheça mais</a>
+        </div>
+        <div class="feature-media">
+          <img src="images/comentarios.png" alt="Mockup de comentário virando conversa no direct da Maky">
+        </div>
       </div>
     </section>
 
     <section class="feature">
-      <div class="feature-text">
-        <p class="feature-eyebrow">CAMPANHAS</p>
-        <h2 class="feature-heading">
-          Feed sempre ativo,<br>
-          publicado na hora certa
-        </h2>
-        <p class="feature-description">A Maky cria e agenda seus posts no Instagram, estático ou carrossel, a partir do que já sabe sobre sua marca. Você só revisa antes de ir ao ar.</p>
-        <a class="btn btn-outline" href="#">Conheça mais</a>
-      </div>
-      <div class="feature-media">
-        <img src="images/campanhas.png" alt="Mockup de agendamento de posts da Maky">
+      <div class="feature-inner container">
+        <div class="feature-text">
+          <p class="feature-eyebrow">CAMPANHAS</p>
+          <h2 class="feature-heading">
+            Feed sempre ativo,<br>
+            publicado na hora certa
+          </h2>
+          <p class="feature-description">A Maky cria e agenda seus posts no Instagram, estático ou carrossel, a partir do que já sabe sobre sua marca. Você só revisa antes de ir ao ar.</p>
+          <a class="btn btn-outline" href="#">Conheça mais</a>
+        </div>
+        <div class="feature-media">
+          <img src="images/campanhas.png" alt="Mockup de agendamento de posts da Maky">
+        </div>
       </div>
     </section>
 
     <section class="feature feature--reversed">
-      <div class="feature-text">
-        <p class="feature-eyebrow">BLOG E IA</p>
-        <h2 class="feature-heading">
-          Apareça nas respostas<br>
-          do ChatGPT
-        </h2>
-        <p class="feature-description">A Maky escreve conteúdo pra construir a presença da sua marca nas respostas do ChatGPT, Claude e Gemini. Quanto mais cedo você aparece, maior a chance de virar a resposta padrão do seu segmento.</p>
-        <a class="btn btn-outline" href="#">Conheça mais</a>
-      </div>
-      <div class="feature-media">
-        <img src="images/blog-ia.png" alt="Mockup de conteúdo de blog otimizado para IA da Maky">
+      <div class="feature-inner container">
+        <div class="feature-text">
+          <p class="feature-eyebrow">BLOG E IA</p>
+          <h2 class="feature-heading">
+            Apareça nas respostas<br>
+            do ChatGPT
+          </h2>
+          <p class="feature-description">A Maky escreve conteúdo pra construir a presença da sua marca nas respostas do ChatGPT, Claude e Gemini. Quanto mais cedo você aparece, maior a chance de virar a resposta padrão do seu segmento.</p>
+          <a class="btn btn-outline" href="#">Conheça mais</a>
+        </div>
+        <div class="feature-media">
+          <img src="images/blog-ia.png" alt="Mockup de conteúdo de blog otimizado para IA da Maky">
+        </div>
       </div>
     </section>
 
     <section class="feature">
-      <div class="feature-text">
-        <p class="feature-eyebrow">MÍDIA PAGA</p>
-        <h2 class="feature-heading">
-          Mais vendas no Google,<br>
-          sem gastar às cegas
-        </h2>
-        <p class="feature-description">A Maky monta a campanha inteira no Google Ads e só publica depois da sua aprovação. Você entra na frente de quem já procura o que vende, sem precisar aprender a plataforma.</p>
-        <a class="btn btn-outline" href="#">Conheça mais</a>
-      </div>
-      <div class="feature-media">
-        <img src="images/midias.png" alt="Mockup de campanha de mídia paga da Maky">
+      <div class="feature-inner container">
+        <div class="feature-text">
+          <p class="feature-eyebrow">MÍDIA PAGA</p>
+          <h2 class="feature-heading">
+            Mais vendas no Google,<br>
+            sem gastar às cegas
+          </h2>
+          <p class="feature-description">A Maky monta a campanha inteira no Google Ads e só publica depois da sua aprovação. Você entra na frente de quem já procura o que vende, sem precisar aprender a plataforma.</p>
+          <a class="btn btn-outline" href="#">Conheça mais</a>
+        </div>
+        <div class="feature-media">
+          <img src="images/midias.png" alt="Mockup de campanha de mídia paga da Maky">
+        </div>
       </div>
     </section>
 
     <section class="comparison">
+      <div class="comparison-inner container">
       <h2 class="comparison-heading">
         O que muda com <span class="comparison-heading-accent">Maky</span><br>
         no seu time
@@ -223,16 +238,20 @@
           </ul>
         </div>
       </div>
+      </div>
     </section>
 
     <section class="cta">
       <div class="cta-block">
-        <h2 class="cta-heading">Contrate Maky pro seu negócio</h2>
-        <a class="btn btn-hero" href="#">Contrate Maky</a>
+        <div class="cta-inner container">
+          <h2 class="cta-heading">Contrate Maky pro seu negócio</h2>
+          <a class="btn btn-hero" href="#">Contrate Maky</a>
+        </div>
       </div>
     </section>
 
     <section class="faq">
+      <div class="faq-inner container">
       <div class="faq-title">
         <h2 class="faq-heading">
           Perguntas<br>
@@ -284,6 +303,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
           </div>
         </div>
+      </div>
       </div>
     </section>
   </main>
