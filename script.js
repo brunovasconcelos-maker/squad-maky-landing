@@ -28,3 +28,17 @@
   window.addEventListener('resize', updateArrows);
   updateArrows();
 })();
+
+(function () {
+  var items = document.querySelectorAll('.faq-item');
+
+  items.forEach(function (item) {
+    var button = item.querySelector('.faq-question');
+    if (!button) return;
+
+    button.addEventListener('click', function () {
+      var isOpen = item.classList.toggle('is-open');
+      button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  });
+})();
