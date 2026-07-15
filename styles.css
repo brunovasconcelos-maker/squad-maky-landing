@@ -883,4 +883,12 @@ button {
     line-height: 0.9;
     letter-spacing: -2.56px;
   }
+
+  /* .cta's own padding stays a small 16-20px at every other breakpoint
+     (unlike other sections, which grow to 138px), so this cap can't reuse
+     the shared .container class without kicking in earlier than 1440px. */
+  .cta-block {
+    max-width: 1164px;
+    margin-inline: auto;
+  }
 }
