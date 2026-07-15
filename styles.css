@@ -42,6 +42,18 @@ button {
 }
 
 /* ==========================================================================
+   Layout
+   ========================================================================== */
+/* Caps content at the 1440px design canvas's content width (1440 - 138*2).
+   Below that viewport width each section's own padding already keeps content
+   at or under 1164px, so this is a no-op until screens grow past 1440px. */
+.container {
+  width: 100%;
+  max-width: 1164px;
+  margin-inline: auto;
+}
+
+/* ==========================================================================
    Buttons (shared)
    ========================================================================== */
 .btn {
@@ -98,12 +110,15 @@ button {
   top: 0;
   z-index: 100;
   background: var(--bg);
+  padding: 16px 16px;
+}
+
+.header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: nowrap;
   gap: 12px;
-  padding: 16px 16px;
 }
 
 .header-left {
@@ -320,6 +335,9 @@ button {
 .feature {
   background: var(--bg);
   padding: 40px 16px;
+}
+
+.feature-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -391,6 +409,9 @@ button {
 .comparison {
   background: var(--bg);
   padding: 60px 16px 160px;
+}
+
+.comparison-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -482,11 +503,16 @@ button {
   background: var(--brand-pink);
   border-radius: 16px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 40px;
   padding: 0 24px;
+}
+
+.cta-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
   text-align: center;
 }
 
@@ -505,6 +531,9 @@ button {
 .faq {
   background: var(--bg);
   padding: 60px 16px 40px;
+}
+
+.faq-inner {
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -612,11 +641,14 @@ button {
   }
 
   .feature {
+    padding: 40px 20px;
+  }
+
+  .feature-inner {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     gap: 40px;
-    padding: 40px 20px;
   }
 
   .feature-text {
@@ -671,6 +703,9 @@ button {
 @media (min-width: 1024px) {
   .site-header {
     padding: 16px 80px;
+  }
+
+  .header-inner {
     flex-wrap: wrap;
   }
 
@@ -789,6 +824,9 @@ button {
 
   .comparison {
     padding: 60px 138px 160px;
+  }
+
+  .comparison-inner {
     gap: 80px;
   }
 
@@ -805,10 +843,13 @@ button {
   }
 
   .faq {
+    padding: 120px 138px 40px;
+  }
+
+  .faq-inner {
     flex-direction: row;
     align-items: flex-start;
     gap: 80px;
-    padding: 120px 138px 40px;
   }
 
   .faq-title {
